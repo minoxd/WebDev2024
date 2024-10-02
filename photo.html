@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="./photo.css">
+    <!-- Font Awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="tag_header">
+            <div class="icon">
+                <img id="icon"
+                    src="https://cdn.haitrieu.com/wp-content/uploads/2022/11/Logo-Truong-Dai-hoc-Khoa-hoc-va-Cong-nghe-Ha-Noi-VN-France-University.png"
+                    alt="">
+            </div>
+            <div class="Home">Home</div>
+            <div class="Image">Image</div>
+            <div class="Tool">Tool</div>
+            <div class="Temp">Template</div>
+            <div class="PSD">PSD</div>
+            <div class="More">More</div>
+        </div>
+
+        <div class="search_header">
+            <input id="search" type="text" placeholder="Search for photo">
+        </div>
+
+        <div class="profile_header">
+            <div class="noti">
+                <i class="fa-regular fa-bell"></i>
+            </div>
+
+            <div class="ava">
+                <i class="fa-solid fa-user"></i>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Body -->
+    <div class="body">
+
+        <!-- Filter-->
+        <!-- data-filter == data-name -->
+        <div class="filter-buttons">
+            <button class="active" data-filter="all">Show all</button>
+            <button data-filter="nature">1</button>
+            <button data-filter="car">2</button>
+            <button data-filter="people">3</button>
+            <button data-filter="house">4</button>
+            <button data-filter="dog">5</button>
+            <button data-filter="cat">6</button>
+            <button data-filter="nature">7</button>
+            <button data-filter="car">8</button>
+            <button data-filter="people">9</button>
+            <button data-filter="house">10</button>
+            <button data-filter="dog">11</button>
+            <button data-filter="cat">12</button>
+            <button data-filter="nature">13</button>
+            <button data-filter="car">14</button>
+            <button data-filter="people">15</button>
+            <button data-filter="house">16</button>
+            <button data-filter="dog">17</button>
+            <button data-filter="cat">18</button>
+            <button data-filter="nature">19</button>
+            <button data-filter="car">20</button>
+            <button data-filter="people">21</button>
+            <button data-filter="house">22</button>
+            <button data-filter="dog">23</button>
+            <button data-filter="cat">24</button>
+            <button data-filter="cat">25</button>
+            <button data-filter="nature">26</button>
+            <button data-filter="car">27</button>
+            <button data-filter="people">28</button>
+            <button data-filter="house">29</button>
+            <button data-filter="dog">30</button>
+            <button data-filter="cat">31</button>
+            <button data-filter="nature">32</button>
+            <button data-filter="car">33</button>
+            <button data-filter="people">34</button>
+        </div>
+
+        <!-- Filterable Images / Cards Section -->
+        <div class="filterable-cards">
+            <div class="row">
+                <div class="card" data-name="nature">
+                    <img src="cloth-1.jpg" alt="nature">
+                </div>
+
+                <div class="card" data-name="nature">
+                    <img src="cloth-2.jpg" alt="img">
+                </div>
+
+                <div class="card" data-name="nature">
+                    <img src="cloth-3.jpg" alt="img">
+                </div>
+
+                <div class="card" data-name="cars">
+                    <img src="phone-1.jpg" alt="img">
+                </div>
+
+                <div class="card" data-name="cars">
+                    <img src="phone-2.jpg" alt="img">
+                </div>
+
+                <div class="card" data-name="cars">
+                    <img src="phone-1.jpg" alt="img">
+                </div>
+
+                <div class="card" data-name="people">
+                    <img src="shoe-1.jpg" alt="img">
+                </div>
+
+                <div class="card" data-name="people">
+                    <img src="shoe-2.jpg" alt="img">
+                </div>
+
+                <div class="card" data-name="people">
+                    <img src="shoe-2.jpg" alt="img">
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="card" data-name="nature">
+                    <img src="cloth-1.jpg" alt="nature">
+                </div>
+
+                <div class="card" data-name="nature">
+                    <img src="cloth-2.jpg" alt="img">
+                </div>
+
+                <div class="card" data-name="nature">
+                    <img src="cloth-3.jpg" alt="img">
+                </div>
+
+                <div class="card" data-name="cars">
+                    <img src="phone-1.jpg" alt="img">
+                </div>
+
+                <div class="card" data-name="cars">
+                    <img src="phone-2.jpg" alt="img">
+                </div>
+
+                <div class="card" data-name="cars">
+                    <img src="phone-1.jpg" alt="img">
+                </div>
+
+                <div class="card" data-name="people">
+                    <img src="shoe-1.jpg" alt="img">
+                </div>
+
+                <div class="card" data-name="people">
+                    <img src="shoe-2.jpg" alt="img">
+                </div>
+
+                <div class="card" data-name="people">
+                    <img src="shoe-2.jpg" alt="img">
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="card" data-name="nature">
+                    <img src="cloth-1.jpg" alt="nature">
+                </div>
+
+                <div class="card" data-name="nature">
+                    <img src="cloth-2.jpg" alt="img">
+                </div>
+
+                <div class="card" data-name="nature">
+                    <img src="cloth-3.jpg" alt="img">
+                </div>
+
+                <div class="card" data-name="cars">
+                    <img src="phone-1.jpg" alt="img">
+                </div>
+
+                <div class="card" data-name="cars">
+                    <img src="phone-2.jpg" alt="img">
+                </div>
+
+                <div class="card" data-name="cars">
+                    <img src="phone-1.jpg" alt="img">
+                </div>
+
+                <div class="card" data-name="people">
+                    <img src="shoe-1.jpg" alt="img">
+                </div>
+
+                <div class="card" data-name="people">
+                    <img src="shoe-2.jpg" alt="img">
+                </div>
+
+                <div class="card" data-name="people">
+                    <img src="shoe-2.jpg" alt="img">
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="card" data-name="nature">
+                    <img src="cloth-1.jpg" alt="nature">
+                </div>
+
+                <div class="card" data-name="nature">
+                    <img src="cloth-2.jpg" alt="img">
+                </div>
+
+                <div class="card" data-name="nature">
+                    <img src="cloth-3.jpg" alt="img">
+                </div>
+
+                <div class="card" data-name="cars">
+                    <img src="phone-1.jpg" alt="img">
+                </div>
+
+                <div class="card" data-name="cars">
+                    <img src="phone-2.jpg" alt="img">
+                </div>
+
+                <div class="card" data-name="cars">
+                    <img src="phone-1.jpg" alt="img">
+                </div>
+
+                <div class="card" data-name="people">
+                    <img src="shoe-1.jpg" alt="img">
+                </div>
+
+                <div class="card" data-name="people">
+                    <img src="shoe-2.jpg" alt="img">
+                </div>
+
+                <div class="card" data-name="people">
+                    <img src="shoe-2.jpg" alt="img">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- JavaScript script -->
+    <script src="./photo.js"></script>
+</body>
+
+</html>
