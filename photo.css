@@ -1,0 +1,145 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    margin: 8px;
+}
+
+/* Header CSS */
+#icon{
+    width: 100px;
+    height: 50px;
+}
+
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 8px 20px;
+    position: fixed;
+    z-index: 1;
+    border-bottom: 1px;
+    box-shadow: 0 2px 3px 0 #ccc;
+    background-color: white;
+}
+
+.tag_header{
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+}
+
+.Home, .Image, .Tool, .Temp, .PSD, .More {
+    padding: 0px 15px;
+    width: 100%;
+}
+
+.search_header{
+    width: 100%;
+}
+
+#search{
+    width: 95%;
+    height: 60%;
+    padding: 10px;
+    border: none;
+    background-color: #e7e7e7;
+    margin-top: 15px;
+}
+
+.profile_header{
+    display: flex;
+    width: 10%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile_header .noti, .ava{
+    padding: 0px, 5px;
+}
+
+/* Body */
+.body{
+    height: 2000px; 
+    width: 100%;
+    padding-top: 100px;  
+    margin: auto;
+}
+/* Filter CSS */
+.filter-buttons{
+    margin: 0px 10px;
+    height: fit-content;
+    padding: 0px 0px 10px 0px ;
+}
+
+.filter-buttons button {
+    background: #2a3c95;
+    border-color: transparent;
+    padding: 8px;
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 3px;
+}
+  
+.filter-buttons button:hover {
+    background: #ec2227;
+    color: white;
+}
+  
+.filter-buttons button.active {
+    color: white;
+    background: #ec2227;
+}
+
+/* Image CSS */
+.filterable-cards{
+    display: flex;
+    margin: 0px 10px;
+    width: 100%;;
+}
+.filterable-cards .card {
+    width: 250px;
+    height: fit-content;
+    border: 2px solid transparent;
+    margin: 5px 10px 5px 0px;
+}
+  
+.filterable-cards .card.hide {
+    display: none;
+}
+  
+/* Row CSS */
+.row{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 10px;
+}
+
+/* Footer */
+/* .footer{
+    text-align: center;
+    padding: 12px ;
+    background-color: white;
+}
+.foot-item{
+    display: flex;    
+    justify-content: center;
+}
+.foot-text p{
+    display: block;
+    padding: 10px 0px;
+    color: #bcbcbc;
+    font-family:"Lato", sans-serif ;
+}
+.foot-item i{
+    color: #bcbcbc;
+    font-size: 24px;
+    width: 24px;
+    margin: 0px 3px;
+} */
