@@ -17,3 +17,20 @@ const filterCards = (e) => {
 }
 
 filterButtons.forEach(button => button.addEventListener("click", filterCards));
+
+
+
+
+document.getElementById('showMoreBtn').addEventListener('click', function() {
+    const hiddenButtons = document.querySelector('.hidden-buttons');
+    const moreButton = document.getElementById('showMoreBtn');
+
+    // Toggle the visibility of hidden buttons
+    if (hiddenButtons.style.display === "none" || hiddenButtons.style.display === "") {
+        hiddenButtons.style.display = "flex";  // Use flex to display hidden buttons inline
+        moreButton.textContent = "Less";
+    } else {
+        hiddenButtons.style.display = "none";
+        moreButton.textContent = "More";
+    }
+});
