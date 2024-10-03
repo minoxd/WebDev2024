@@ -1,22 +1,34 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
 }
 
-img{
+div {
+    font-family: Helvetica;
+    font-size: 13px;
+}
+
+input {
+    font-family: Helvetica;
+}
+
+img {
     width: 100%;
-    height: 100%;
-    margin: 8px;
+    height: auto;
 }
 
 /* Header CSS */
-#icon{
-    width: 100px;
-    height: 50px;
+#icon {
+    width: 80px;
+    height: 40px;
 }
 
-.header{
+#icon:hover {
+    cursor: pointer;
+}
+
+.header {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -28,118 +40,210 @@ img{
     background-color: white;
 }
 
-.tag_header{
+.tag_header,
+.profile_header {
     display: flex;
     width: fit-content;
     align-items: center;
     justify-content: center;
 }
 
-.Home, .Image, .Tool, .Temp, .PSD, .More {
+.Home,
+.Create {
     padding: 0px 15px;
     width: 100%;
 }
 
-.search_header{
-    width: 100%;
+.Home {
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    padding: 12px;
+    margin-left: 8px;
 }
 
-#search{
-    width: 95%;
+.Home:hover {
+    cursor: pointer;
+}
+
+.Create:hover {
+    cursor: pointer;
+}
+
+.search_header {
+    width: 80%;
+}
+
+#search {
+    width: 100%;
     height: 60%;
-    padding: 10px;
+    padding: 15px;
     border: none;
     background-color: #e7e7e7;
-    margin-top: 15px;
+    margin-top: 12px;
+    border-radius: 30px;
 }
 
-.profile_header{
-    display: flex;
-    width: 10%;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.profile_header .noti, .ava{
-    padding: 0px, 5px;
+.noti,
+.ava,
+.chat,
+.more {
+    width: 100%;
+    margin: 0px 10px;
 }
 
 /* Body */
-.body{
-    height: 2000px; 
+.body {
     width: 100%;
-    padding-top: 100px;  
+    padding-top: 100px;
     margin: auto;
 }
+
 /* Filter CSS */
-.filter-buttons{
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
     margin: 0px 10px;
-    height: fit-content;
-    padding: 0px 0px 10px 0px ;
+    padding: 0px 0px 10px 0px;
+    width: 100%;
 }
 
 .filter-buttons button {
+    color: white;
     background: #2a3c95;
     border-color: transparent;
-    padding: 8px;
+    padding: 8px 10px;
     border-radius: 10px;
-    color: white;
-    margin-bottom: 3px;
+    margin: 0px 3px 10px 0px;
 }
-  
+
 .filter-buttons button:hover {
     background: #ec2227;
     color: white;
+    cursor: pointer;
 }
-  
+
 .filter-buttons button.active {
     color: white;
     background: #ec2227;
+    cursor: pointer;
+}
+
+/* More button CSS */
+.hidden-buttons {
+    display: none;
+    flex-wrap: wrap;
+}
+
+#showMoreBtn {
+    color: white;
+    background: #2a3c95;
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+#showMoreBtn:hover {
+    color: white;
+    background: #ec2227;
+    cursor: pointer;
 }
 
 /* Image CSS */
-.filterable-cards{
+.filterable-cards {
     display: flex;
-    margin: 0px 10px;
-    width: 100%;;
+    width: 100%;
+    height: 100%;
 }
+
 .filterable-cards .card {
     width: 250px;
     height: fit-content;
-    border: 2px solid transparent;
-    margin: 5px 10px 5px 0px;
+    margin: 8px;
 }
-  
+
+.filterable-cards .card:hover {
+    cursor: pointer;
+    transform: scale(1.05)
+}
+
+.filterable-cards .card img {
+    border-radius: 30px;
+    border-bottom: 1px;
+    box-shadow: 0 2px 3px 0 #343333;
+}
+
 .filterable-cards .card.hide {
     display: none;
 }
-  
+
 /* Row CSS */
-.row{
+.column {
     display: flex;
+    margin: 0px 5px;
+    flex-wrap: wrap;
     flex-direction: column;
-    margin: 0px 10px;
 }
 
 /* Footer */
-/* .footer{
+.footer {
+    background-color: black;
+    color: white;
     text-align: center;
-    padding: 12px ;
-    background-color: white;
+    padding: 20px 0px;
+    margin-top: 100px;
 }
-.foot-item{
-    display: flex;    
+
+.f-item {
+    display: flex;
+    align-items: center;
     justify-content: center;
-}
-.foot-text p{
-    display: block;
-    padding: 10px 0px;
-    color: #bcbcbc;
-    font-family:"Lato", sans-serif ;
-}
-.foot-item i{
-    color: #bcbcbc;
+    margin: 8px 0px;
     font-size: 24px;
-    width: 24px;
-    margin: 0px 3px;
-} */
+}
+
+.f-item div {
+    padding: 0px 2px;
+}
+
+.f-text p {
+    margin: 5px 0px;
+}
+
+@media only screen and (max-width: 3100px) {
+    .body {
+        height: 2150px;
+    }
+}
+
+@media only screen and (max-width: 2100px) {
+    .body {
+        height: 2900px;
+    }
+}
+
+
+@media only screen and (max-width: 1600px) {
+    .body {
+        height: 4000px;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .body {
+        height: 5000px;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .body {
+        height: 6000px;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .body {
+        height: 9500px;
+    }
+}
