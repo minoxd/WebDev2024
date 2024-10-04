@@ -18,6 +18,11 @@ img {
     height: auto;
 }
 
+i:hover{
+    cursor: pointer;
+    transform: scale(2);
+}
+
 /* Header CSS */
 #icon {
     width: 80px;
@@ -160,7 +165,7 @@ img {
 .filterable-cards .card {
     width: 250px;
     height: fit-content;
-    margin: 8px;
+    margin: 8px 8px 10px 8px;
 }
 
 .filterable-cards .card:hover {
