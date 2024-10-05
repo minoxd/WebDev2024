@@ -22,12 +22,9 @@ const filterCards = (e) => {
         card.classList.add("hide");
     });
 
-
 }
 
 filterButtons.forEach(button => button.addEventListener("click", filterCards));
-
-
 
 
 document.getElementById('showMoreBtn').addEventListener('click', function () {
@@ -46,8 +43,58 @@ document.getElementById('showMoreBtn').addEventListener('click', function () {
 
 
 
-const logo = document.getElementById('pageLogo');
+const logo = document.getElementById('icon');
 
 logo.addEventListener('click', () => {
     window.location.reload(); // This reloads the page
+});
+
+
+// Select icons and dropdowns
+const notiIcon = document.querySelector('.noti i');
+const chatIcon = document.querySelector('.chat i');
+const moreIcon = document.querySelector('.more i');
+const menuButton = document.querySelector('.menu i');
+
+const notiContent = document.querySelector('.noti-content');
+const chatContent = document.querySelector('.chat-content');
+const moreContent = document.querySelector('.more-content');
+const menuContent = document.querySelector('.menu ul');
+
+// Function to toggle dropdown visibility
+function toggleDropdown(content) {
+    // Hide all dropdowns first
+    notiContent.style.display = 'none';
+    chatContent.style.display = 'none';
+    moreContent.style.display = 'none';
+
+    // Toggle the visibility of the clicked content
+    if (content.style.display === 'block') {
+        content.style.display = 'none';
+    } else {
+        content.style.display = 'block';
+    }
+}
+
+// Event listeners for click
+notiIcon.addEventListener('click', () => toggleDropdown(notiContent));
+chatIcon.addEventListener('click', () => toggleDropdown(chatContent));
+moreIcon.addEventListener('click', () => toggleDropdown(moreContent));
+moreIcon.addEventListener('click', () => toggleDropdown(menuContent));
+
+menuButton.addEventListener('click', function() {
+   
+    menuContent.classList.toggle('show');
+});
+
+
+document.addEventListener('click', (event) => {
+    if (!event.target.closest('.noti') && !event.target.closest('.chat') && !event.target.closest('.more')) {
+        notiContent.style.display = 'none';
+        chatContent.style.display = 'none';
+        moreContent.style.display = 'none';
+    }
+    if (!event.target.closest('.menu')) {
+        menuContent.classList.remove('show');
+    }
 });
