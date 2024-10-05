@@ -18,9 +18,14 @@ img {
     height: auto;
 }
 
-i:hover{
+
+.noti i:hover,
+.chat i:hover,
+.ava i:hover,
+.more i:hover {
     cursor: pointer;
-    transform: scale(2);
+    background-color: #ccc;
+
 }
 
 /* Header CSS */
@@ -89,12 +94,100 @@ i:hover{
     border-radius: 30px;
 }
 
+/* Button in Header */
+.profile_header{
+    margin-left: 5px;
+}
+
 .noti,
 .ava,
 .chat,
 .more {
     width: 100%;
     margin: 0px 10px;
+}
+
+.noti i,
+.chat i,
+.ava i,
+.more i {
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.dropdown {
+    display: none;
+    background-color: #f1f1f1;
+    padding: 10px;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    z-index: 1;
+    border-top-left-radius: 30px;
+}
+
+.menu {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    border-radius: 50px ;
+}
+
+.menu ul{
+    position: absolute;
+    list-style: none;
+    background-color: white;
+    color: black;
+    left: 0;
+    top: 100%;
+    transform: translate(-65%, 0);
+    display: none;
+    box-shadow: 0 2px 3px 0 black;
+    margin: 18px;
+}
+
+.menu ul li {
+    padding: 12px;
+    width: 150px;
+    height: 40px;
+    cursor: pointer; 
+}
+
+.menu ul.show {
+    display: block;
+}
+
+.menu:hover{
+    cursor: pointer;
+    background-color: rgb(204, 204, 204);
+    color: black;
+}
+
+.menu ul li:hover{
+    background-color: #ccc;
+    color: black;
+}
+
+.menu:hover ul{
+    display: block;
+} 
+
+.noti-content,
+.chat-content {
+    margin-top: 35px;
+    height: 100vh;
+    width: 450px;
+}
+
+.more-content {
+    margin-top: 35px;
+    height: 60vh;
+    width: 400px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
 }
 
 /* Body */
@@ -245,10 +338,32 @@ i:hover{
     .body {
         height: 6000px;
     }
+
+    .noti,
+    .chat,
+    .ava,
+    .more {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
 }
 
 @media only screen and (max-width: 760px) {
     .body {
         height: 9500px;
+    }
+
+    .noti,
+    .chat,
+    .ava,
+    .more {
+        display: none;
+    }
+
+    .menu {
+        display: block;
     }
 }
