@@ -1,4 +1,4 @@
-// Select relevant HTML elements
+// Filter Function
 const filterButtons = document.querySelectorAll(".filter-buttons button");
 const filterableCards = document.querySelectorAll(".filterable-cards .card");
 const cardColumn = document.querySelector('.column');
@@ -27,6 +27,7 @@ const filterCards = (e) => {
 filterButtons.forEach(button => button.addEventListener("click", filterCards));
 
 
+// More Filter Button
 document.getElementById('showMoreBtn').addEventListener('click', function () {
     const hiddenButtons = document.querySelector('.hidden-buttons');
     const moreButton = document.getElementById('showMoreBtn');
@@ -42,15 +43,15 @@ document.getElementById('showMoreBtn').addEventListener('click', function () {
 });
 
 
-
+// Refresh of page's logo
 const logo = document.getElementById('icon');
 
 logo.addEventListener('click', () => {
-    window.location.reload(); // This reloads the page
+    window.location.reload();
 });
 
 
-// Select icons and dropdowns
+// Display when click
 const notiIcon = document.querySelector('.noti i');
 const chatIcon = document.querySelector('.chat i');
 const moreIcon = document.querySelector('.more i');
@@ -96,5 +97,32 @@ document.addEventListener('click', (event) => {
     }
     if (!event.target.closest('.menu')) {
         menuContent.classList.remove('show');
+    }
+});
+
+// Search Functionality
+document.getElementById('search').addEventListener('input', function () {
+    const searchValue = this.value.toLowerCase();
+    const cards = document.querySelectorAll('.card'); // Get all image cards
+    let matchesFound = false; // To check if there's any match
+
+    cards.forEach(card => {
+        const altText = card.querySelector('img').getAttribute('alt').toLowerCase(); // Get alt text of the image
+        const dataName = card.getAttribute('data-name').toLowerCase(); // Get data-name attribute of the card
+
+        // Check if search value matches alt text or data-name
+        if (altText.includes(searchValue) || dataName.includes(searchValue)) {
+            card.style.display = ''; // Show the image card
+            matchesFound = true; // A match is found
+        } else {
+            card.style.display = 'none'; // Hide the image card
+        }
+    });
+
+    // Change layout to row if search has matches, otherwise revert to column
+    if (matchesFound && searchValue !== '') {
+        cardColumn.style.flexDirection = 'row';
+    } else {
+        cardColumn.style.flexDirection = 'column';
     }
 });
