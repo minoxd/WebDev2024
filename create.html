@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="./photo.css">
+    <link rel="stylesheet" href="./create.css">
+    <!-- Font Awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+          integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+<!-- Header -->
+<div class="header">
+    <div class="tag_header">
+        <div class="icon">
+            <img id="icon" src="https://usth.edu.vn/wp-content/uploads/2021/11/logo.png" alt="">
+        </div>
+        <div class="Home"><button><a href="photo.html" id="photo">Home</a></button></div>
+        <div class="Create"><button><a href="create.html" id="create">Create</a></button></div>
+    </div>
+
+    <div class="search_header">
+        <input id="search" type="text" placeholder="Search for photo">
+    </div>
+
+    <div class="profile_header">
+        <div class="noti">
+            <i class="fa-regular fa-bell"></i>
+        </div>
+
+        <div class="chat">
+            <i class="fa-solid fa-comment"></i>
+        </div>
+
+        <div class="ava">
+            <i class="fa-solid fa-user"></i>
+        </div>
+
+        <div class="more">
+            <i class="fa-solid fa-angle-down"></i>
+        </div>
+
+        <div class="menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+</div>
+
+
+<div class="upload-container">
+    <div class="upload-wrapper">
+        <!-- Left side: Image upload -->
+        <div id="drop-area" class="drop-area">
+            <h3>Drag & Drop your image here</h3>
+            <p>Or</p>
+            <input type="file" id="fileElem" accept="image/*" hidden>
+            <label for="fileElem" class="upload-button">Upload Image</label>
+        </div>
+
+        <!-- Right side: Image information -->
+        <div class="image-info">
+            <h3>Image Information</h3>
+
+            <!-- Name input -->
+            <div class="info-field">
+                <label for="imageName">Name</label>
+                <input type="text" id="imageName" placeholder="Enter image name" />
+            </div>
+
+            <!-- Description input -->
+            <div class="info-field">
+                <label for="imageDescription">Description</label>
+                <textarea id="imageDescription" placeholder="Enter image description"></textarea>
+            </div>
+
+            <!-- Link input -->
+            <div class="info-field">
+                <label for="imageLink">Image URL</label>
+                <input type="text" id="imageLink" placeholder="Enter image URL" />
+            </div>
+
+            <!-- Tag input -->
+            <div class="info-field">
+                <label for="imageTags">Tags</label>
+                <input type="text" id="imageTags" placeholder="Enter image tags" />
+            </div>
+
+            <!-- More options (can add buttons or more fields) -->
+            <div class="more-options">
+                <button class="more-button">Upload</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Preview -->
+    <div id="preview"></div>
+</div>
+
+
+<script src="create.js"></script>
+
+</body>
+</html>
