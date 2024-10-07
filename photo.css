@@ -50,6 +50,22 @@ img {
     background-color: white;
 }
 
+#home{
+    text-decoration: none;
+    color: white;
+}
+
+#create {
+    text-decoration: none;
+    color: black;
+}
+
+button{
+    padding: 0;
+    border: none;
+    background: none;
+}
+
 .tag_header,
 .profile_header {
     display: flex;
