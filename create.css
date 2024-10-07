@@ -1,0 +1,130 @@
+a{
+    text-decoration:none;
+}
+#home{
+    text-decoration: none;
+    color: black;
+}
+#create {
+    text-decoration: none;
+    color: white;
+}
+button{
+    padding: 0;
+    border: none;
+    background: none;
+}
+.Home {
+    background-color: white;
+    color: white;
+    border-radius: 30px;
+    padding: 12px;
+    margin-left: 8px;
+}
+
+.Create{
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    padding: 12px;
+
+}
+/* Wrapper for the upload area and image info */
+.upload-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Adjust the gap between the two columns */
+    padding: 200px;
+
+
+    .drop-area {
+        flex: 1; /* Take up equal space */
+        border: 2px dashed #c4c4c4;
+        border-radius: 10px;
+        padding: 50px;
+        background-color: #fafafa;
+        text-align: center;
+        transition: all 0.3s ease;
+        margin-top: 50px;
+    }
+
+    .drop-area:hover {
+        border-color: #aaa;
+        background-color: #f3f3f3;
+    }
+
+    /* Right side: Image info */
+
+    .image-info {
+        margin-top: 50px;
+        flex: 1; /* Take up equal space */
+        background-color: #f5f5f5;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 3px 0 #ccc;
+    }
+
+    .image-info h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* Info field styling */
+
+    .info-field {
+        margin-bottom: 20px;
+    }
+
+    .info-field label {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 8px;
+        color: #333;
+    }
+
+    .info-field input, .info-field textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 14px;
+        resize: none;
+    }
+
+    /* Adjust the height of the textarea */
+
+    .info-field textarea {
+        height: 80px;
+    }
+
+    /* More options button */
+
+    .more-button {
+        background-color: #2a3c95;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        display: inline-block;
+        transition: background-color 0.2s ease;
+    }
+
+    .more-button:hover {
+        background-color: #2a5f99;
+    }
+
+    /* Preview styling remains unchanged */
+
+    #preview {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    #preview img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+}
