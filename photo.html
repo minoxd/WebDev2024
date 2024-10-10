@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="./photo.css">
+    <!-- Font Awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="tag_header">
+            <div class="icon">
+                <img id="icon" src="https://usth.edu.vn/wp-content/uploads/2021/11/logo.png" alt="icon">
+            </div>
+            <div class="Home"><button><a href="photo.html" id="home">Home</a></button></div>
+            <div class="Create"><button><a href="create.html" id="create">Create</a></button></div>
+
+        </div>
+
+        <div class="search_header">
+            <input id="search" type="text" placeholder="Search for photo">
+        </div>
+
+        <div class="profile_header">
+            <div class="noti">
+                <i class="fa-regular fa-bell click"></i>
+                <div class="dropdown noti-content">
+                    <div class="text_chat">
+                        <h3>Update</h3>
+                    </div>
+
+                    <div class="noti_chat">
+                        <h3>Today</h3>
+                    </div>
+
+                    <div class="list-item">
+                        <img src="https://img.freepik.com/free-photo/androgynous-avatar-non-binary-queer-person_23-2151100270.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1728432000&semt=ais_hybrid"
+                          .jpeg  alt="Profile">
+                        <div class="list-item-text">
+                            <p>Bảng tin nhà của bạn có các Ghim mới</p>
+                        </div>
+                        <div class="list_noti_date">
+                            <p>4 days</p>
+                        </div>
+                    </div>
+
+                    <div class="list-item">
+                        <i class="fa-solid fa-plus"></i>
+                        <div class="list-item-text">
+                            <p>Ý tưởng nào thật sự mang phong cách? Tạo Ghim đầu tiên của bạn để chia sẻ điều truyền cảm
+                                hứng cho bạn. </p>
+                        </div>
+                        <div class="list_noti_date">
+                            <p>4 days</p>
+                        </div>
+                    </div>
+
+                    <div class="list-item">
+                        <img src="https://thumbs.dreamstime.com/b/chat-icon-isolated-white-background-79426494.jpg"
+                          .jpeg  alt="Image">
+                        <div class="list-item-text">
+                            <p>Ý tưởng dành cho bạn
+                        </div>
+                        <div class="list_noti_date">
+                            <p>4 days</p>
+                        </div>
+                    </div>
+
+                    <div class="list-item">
+                        <img src="https://cdn-icons-png.flaticon.com/512/5651/5651147.png.jpeg" alt="Comic">
+                        <div class="list-item-text">
+                            <p>Nghệ thuật truyện tranh cho bạn
+                        </div>
+                        <div class="list_noti_date">
+                            <p>4 days</p>
+                        </div>
+                    </div>
+
+                    <div class="list-item">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <div class="list-item-text">
+                            <p>Bạn vẫn đang tìm kiếm? Hãy khám phá các ý tưởng liên quan đến Reel </p>
+                        </div>
+                        <div class="list_noti_date">
+                            <p>4 days</p>
+                        </div>
+                    </div>
+
+                    <div class="list-item">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <div class="list-item-text">
+                            <p>Bạn vẫn đang tìm kiếm? Hãy khám phá các ý tưởng liên quan đến Flickr UI </p>
+                        </div>
+                        <div class="list_noti_date">
+                            <p>4 days</p>
+                        </div>
+                    </div>
+
+                    <div class="list-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzzGzgjBMmWYLJeZIke9xfXwGuRvRvrM0z9w&s"
+                          .jpeg  alt="Dragon Ball">
+                        <div class="list-item-text">
+                            <p>Bảy viên ngọc rồng cho bạn </p>
+                        </div>
+                        <div class="list_noti_date">
+                            <p>4 days</p>
+                        </div>
+                    </div>
+
+                    <div class="list-item">
+                        <img src="https://t4.ftcdn.net/jpg/02/32/88/17/360_F_232881761_fFzmhZfuQx6xnytVFlB1Bg3ApIjfoX9J.jpg"
+                          .jpeg  alt="Flowers">
+                        <div class="list-item-text">
+                            <p>Lấy cảm hứng từ bạn </p>
+                        </div>
+                        <div class="list_noti_date">
+                            <p>4 days</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat">
+                <i class="fa-solid fa-comment click"></i>
+                <div class="dropdown chat-content">
+                    <div class="chat_content">
+                        <div class="inbox_header">
+                            <i class="fa-solid fa-xmark click"></i>
+                            <h3>Inbox</h3>
+                            <i class="fa-solid fa-ellipsis click"></i>
+                        </div>
+
+                        <div class="message_section">
+                            <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
+                            <p>New messages</p>
+                        </div>
+
+                        <div class="friend_invite">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <p>Invite Friends</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="ava">
+                <i class="fa-solid fa-user click"></i>
+                <div class="dropdown user-content">User Content</div>
+            </div>
+
+            <div class="more">
+                <i class="fa-solid fa-angle-down click"></i>
+                <div class="dropdown more-content">Setting Content</div>
+            </div>
+
+            <div class="menu">
+                <i class="fa-solid fa-bars"></i>
+                <ul>
+                    <li>Notification</li>
+                    <li>Chats</li>
+                    <li>Users</li>
+                    <li>Setting</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Body -->
+    <div class="body">
+
+        <!-- Filter-->
+        <div class="filter-buttons">
+            <button class="active" data-filter="all">Show all</button>
+
+            <button data-filter="nature">Nature</button>
+            <button data-filter="car">Cars</button>
+            <button data-filter="phone">Phone</button>
+            <button data-filter="shoe">Shoes</button>
+            <button data-filter="cloth">Clothes</button>
+            <button data-filter="movie">Movie</button>
+            <button data-filter="house">House</button>
+            <button data-filter="city">City</button>
+            <button data-filter="music">Music</button>
+            <button data-filter="laptop">Laptops</button>
+            <button data-filter="food">Food</button>
+            <button data-filter="book">Books</button>
+            <button data-filter="art">Art</button>
+            <button data-filter="game">Games</button>
+            <button data-filter="travel">Travel</button>
+            <button data-filter="animal">Animals</button>
+            <button data-filter="bike">Bikes</button>
+            <button data-filter="furniture">Furniture</button>
+            <button data-filter="toy">Toys</button>
+            <button data-filter="space">Space</button>
+            <button data-filter="plant">Plants</button>
+            <button data-filter="building">Buildings</button>
+            <button data-filter="watch">Watches</button>
+            <button data-filter="gadget">Gadgets</button>
+            <button data-filter="drink">Drinks</button>
+            <button data-filter="fashion">Fashion</button>
+
+            <div class="hidden-buttons">
+                <button data-filter="sport">Sports</button>
+                <button data-filter="technology">Technology</button>
+                <button data-filter="fitness">Fitness</button>
+                <button data-filter="camera">Cameras</button>
+                <button data-filter="history">History</button>
+                <button data-filter="festival">Festivals</button>
+                <button data-filter="education">Education</button>
+                <button data-filter="music-instruments">Music Instruments</button>
+            </div>
+
+            <button id="showMoreBtn">More</button>
+
+        </div>
+
+        <!-- Filterable Images / Cards Section -->
+        <div class="filterable-cards">
+
+            <div class="column">
+
+                <div class="card" data-name="animal">
+                    <img loading="lazy" src="https://imgur.com/vPcF5hG.jpeg" alt="animal">
+                </div>
+
+                <div class="card" data-name="animal">
+                    <img loading="lazy" src="https://imgur.com/xfEvtmE.jpeg" alt="animal">
+                </div>
+
+                <div class="card" data-name="animal">
+                    <img loading="lazy" src="https://imgur.com/cxOES4z.jpeg" alt="animal">
+                </div>
+
+                <div class="card" data-name="car">
+                    <img loading="lazy" src="https://imgur.com/MZ6bCx9.jpeg" alt="car">
+                </div>
+
+                <div class="card" data-name="car">
+                    <img loading="lazy" src="https://imgur.com/s8urdj0.jpeg" alt="car">
+                </div>
+
+                <div class="card" data-name="car">
+                    <img loading="lazy" src="https://imgur.com/STHBQRZ.jpeg" alt="car">
+                </div>
+
+                <div class="card" data-name="nature">
+                    <img loading="lazy" src="https://imgur.com/UlSpVWB.jpeg" alt="nature">
+                </div>
+
+                <div class="card" data-name="nature">
+                    <img loading="lazy" src="https://imgur.com/bqLyNHs.jpeg" alt="nature">
+                </div>
+
+                <div class="card" data-name="nature">
+                    <img loading="lazy" src="https://imgur.com/L91DT7a.jpeg" alt="nature">
+                </div>
+
+                <div class="card" data-name="technology">
+                    <img loading="lazy" src="https://imgur.com/mu923p0.jpeg" alt="technology">
+                </div>
+
+                <div class="card" data-name="technology">
+                    <img loading="lazy" src="https://imgur.com/AvuZ2uy.jpeg" alt="technology">
+                </div>
+
+                <div class="card" data-name="technology">
+                    <img loading="lazy" src="https://imgur.com/uxE21Fj.jpeg" alt="technology">
+                </div>
+
+                <div class="card" data-name="phone">
+                    <img loading="lazy" src="https://imgur.com/PzKTp2d.jpeg" alt="phone">
+                </div>
+
+                <div class="card" data-name="phone">
+                    <img loading="lazy" src="https://imgur.com/Eg1ZDc1.jpeg" alt="phone">
+                </div>
+
+                <div class="card" data-name="shoe">
+                    <img loading="lazy" src="https://imgur.com/DAGu3H8.jpeg" alt="shoe">
+                </div>
+
+                <div class="card" data-name="shoe">
+                    <img loading="lazy" src="https://imgur.com/NOQTN2r.jpeg" alt="shoe">
+                </div>
+
+                <div class="card" data-name="cloth">
+                    <img loading="lazy" src="https://imgur.com/nkJkNhc.jpeg" alt="cloth">
+                </div>
+
+                <div class="card" data-name="cloth">
+                    <img loading="lazy" src="https://imgur.com/Vru2kEL.jpeg" alt="cloth">
+                </div>
+
+                <div class="card" data-name="cloth">
+                    <img loading="lazy" src="https://imgur.com/BLD5LXH.jpeg" alt="cloth">
+                </div>
+
+                <div class="card" data-name="movie">
+                    <img loading="lazy" src="https://imgur.com/gUjvl5D.jpeg" alt="movie">
+                </div>
+
+                <div class="card" data-name="movie">
+                    <img loading="lazy" src="https://imgur.com/F2fvkYW.jpeg" alt="movie">
+                </div>
+
+                <div class="card" data-name="house">
+                    <img loading="lazy" src="https://imgur.com/IZk8RaO.jpeg" alt="house">
+                </div>
+
+                <div class="card" data-name="house">
+                    <img loading="lazy" src="https://imgur.com/3siLU43.jpeg" alt="house">
+                </div>
+
+                <div class="card" data-name="city">
+                    <img loading="lazy" src="https://imgur.com/XzMJq0c.jpeg" alt="city">
+                </div>
+
+                <div class="card" data-name="city">
+                    <img loading="lazy" src="https://imgur.com/7Mxb08e.jpeg" alt="city">
+                </div>
+
+                <div class="card" data-name="music">
+                    <img loading="lazy" src="https://imgur.com/GyUdpey.jpeg" alt="music">
+                </div>
+
+                <div class="card" data-name="music">
+                    <img loading="lazy" src="https://imgur.com/YY2C0Vw.jpeg" alt="music">
+                </div>
+
+                <div class="card" data-name="laptop">
+                    <img loading="lazy" src="https://imgur.com/aPYD651.jpeg" alt="laptop">
+                </div>
+
+                <div class="card" data-name="laptop">
+                    <img loading="lazy" src="https://imgur.com/F4ECA4d.jpeg" alt="laptop">
+                </div>
+
+                <div class="card" data-name="food">
+                    <img loading="lazy" src="https://imgur.com/xfWEHMJ.jpeg" alt="food">
+                </div>
+
+                <div class="card" data-name="food">
+                    <img loading="lazy" src="https://imgur.com/DD5K5gG.jpeg" alt="food">
+                </div>
+
+                <div class="card" data-name="book">
+                    <img loading="lazy" src="https://imgur.com/5t8xPqh.jpeg" alt="book">
+                </div>
+
+                <div class="card" data-name="book">
+                    <img loading="lazy" src="https://imgur.com/coL6dr3.jpeg" alt="book">
+                </div>
+
+                <div class="card" data-name="art">
+                    <img loading="lazy" src="https://imgur.com/JYQ2zNn.jpeg" alt="art">
+                </div>
+
+                <div class="card" data-name="art">
+                    <img loading="lazy" src="https://imgur.com/BA8dRN8.jpeg" alt="art">
+                </div>
+
+                <div class="card" data-name="game">
+                    <img loading="lazy" src="https://imgur.com/bkLGeZq.jpeg" alt="game">
+                </div>
+
+                <div class="card" data-name="game">
+                    <img loading="lazy" src="https://imgur.com/sFPtl0X.jpeg" alt="game">
+                </div>
+
+                <div class="card" data-name="travel">
+                    <img loading="lazy" src="https://imgur.com/NyHb4aO.jpeg" alt="travel">
+                </div>
+
+                <div class="card" data-name="travel">
+                    <img loading="lazy" src="https://imgur.com/TcnKtdU.jpeg" alt="travel">
+                </div>
+
+                <div class="card" data-name="bike">
+                    <img loading="lazy" src="https://imgur.com/TWQ8Dw4.jpeg" alt="bike">
+                </div>
+
+                <div class="card" data-name="bike">
+                    <img loading="lazy" src="https://imgur.com/Jyfx11f.jpeg" alt="bike">
+                </div>
+
+                <div class="card" data-name="furniture">
+                    <img loading="lazy" src="https://imgur.com/11U0sIe.jpeg" alt="furniture">
+                </div>
+
+                <div class="card" data-name="furniture">
+                    <img loading="lazy" src="https://imgur.com/UNPVpgJ.jpeg" alt="furniture">
+                </div>
+
+                <div class="card" data-name="toy">
+                    <img loading="lazy" src="https://imgur.com/EPbKDt7.jpeg" alt="toy">
+                </div>
+
+                <div class="card" data-name="toy">
+                    <img loading="lazy" src="https://imgur.com/kOTM9Xo.jpeg" alt="toy">
+                </div>
+
+                <div class="card" data-name="space">
+                    <img loading="lazy" src="https://imgur.com/x6hHvJC.jpeg" alt="space">
+                </div>
+
+                <div class="card" data-name="space">
+                    <img loading="lazy" src="https://imgur.com/XmIyw3W.jpeg" alt="space">
+                </div>
+
+                <div class="card" data-name="plant">
+                    <img loading="lazy" src="https://imgur.com/xpQRqsG.jpeg" alt="plant">
+                </div>
+
+                <div class="card" data-name="plant">
+                    <img loading="lazy" src="https://imgur.com/mJ2NPPj.jpeg" alt="plant">
+                </div>
+
+                <div class="card" data-name="building">
+                    <img loading="lazy" src="https://imgur.com/OIk9CCM.jpeg" alt="building">
+                </div>
+
+                <div class="card" data-name="building">
+                    <img loading="lazy" src="https://imgur.com/OpLK0XJ.jpeg" alt="building">
+                </div>
+
+                <div class="card" data-name="watch">
+                    <img loading="lazy" src="https://imgur.com/mwCU3Oo.jpeg" alt="watch">
+                </div>
+
+                <div class="card" data-name="watch">
+                    <img loading="lazy" src="https://imgur.com/w77IUIx.jpeg" alt="watch">
+                </div>
+
+                <div class="card" data-name="gadget">
+                    <img loading="lazy" src="https://imgur.com/2tZ295M.jpeg" alt="gadget">
+                </div>
+
+                <div class="card" data-name="gadget">
+                    <img loading="lazy" src="https://imgur.com/8dj2ixk.jpeg" alt="gadget">
+                </div>
+
+                <div class="card" data-name="drink">
+                    <img loading="lazy" src="https://imgur.com/Q9cexug.jpeg" alt="drink">
+                </div>
+
+                <div class="card" data-name="drink">
+                    <img loading="lazy" src="https://imgur.com/wWKGkkx.jpeg" alt="drink">
+                </div>
+
+                <div class="card" data-name="fashion">
+                    <img loading="lazy" src="https://imgur.com/Hrptib5.jpeg" alt="fashion">
+                </div>
+
+                <div class="card" data-name="fashion">
+                    <img loading="lazy" src="https://imgur.com/1Yf4QvP.jpeg" alt="fashion">
+                </div>
+
+                <div class="card" data-name="sport">
+                    <img loading="lazy" src="https://imgur.com/cObeRGu.jpeg" alt="sport">
+                </div>
+
+                <div class="card" data-name="sport">
+                    <img loading="lazy" src="https://imgur.com/usV58lG.jpeg" alt="sport">
+                </div>
+
+                <div class="card" data-name="fitness">
+                    <img loading="lazy" src="https://imgur.com/SJjfadJ.jpeg" alt="fitness">
+                </div>
+
+                <div class="card" data-name="fitness">
+                    <img loading="lazy" src="https://imgur.com/HwmpkLg.jpeg" alt="fitness">
+                </div>
+
+                <div class="card" data-name="camera">
+                    <img loading="lazy" src="https://imgur.com/sRXosMI.jpeg" alt="camera">
+                </div>
+
+                <div class="card" data-name="camera">
+                    <img loading="lazy" src="https://imgur.com/5kQBLQh.jpeg" alt="camera">
+                </div>
+
+                <div class="card" data-name="history">
+                    <img loading="lazy" src="https://imgur.com/Oz5NGCb.jpeg" alt="history">
+                </div>
+
+                <div class="card" data-name="history">
+                    <img loading="lazy" src="https://imgur.com/GihmBi0.jpeg" alt="history">
+                </div>
+
+                <div class="card" data-name="festival">
+                    <img loading="lazy" src="https://imgur.com/jssDfAQ.jpeg" alt="festival">
+                </div>
+
+                <div class="card" data-name="festival">
+                    <img loading="lazy" src="https://imgur.com/LmhasN9.jpeg" alt="festival">
+                </div>
+
+                <div class="card" data-name="education">
+                    <img loading="lazy" src="https://imgur.com/jzyD7J4.jpeg" alt="education">
+                </div>
+
+                <div class="card" data-name="education">
+                    <img loading="lazy" src="https://imgur.com/Rm5pCgD.jpeg" alt="education">
+                </div>
+
+                <div class="card" data-name="music-instruments">
+                    <img loading="lazy" src="https://imgur.com/FqdyoSN.jpeg" alt="music-instruments">
+                </div>
+
+                <div class="card" data-name="music-instruments">
+                    <img loading="lazy" src="https://imgur.com/3InFJgj.jpeg" alt="music-instruments">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="f-item">
+            <div>
+                <i class="fa-brands fa-facebook"></i>
+            </div>
+            <div>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+            <div>
+                <i class="fa-brands fa-pinterest"></i>
+            </div>
+            <div>
+                <i class="fa-brands fa-snapchat"></i>
+            </div>
+            <div>
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+            <div>
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+        </div>
+        <div class="f-text">
+            <p>© 2024 Photo Gallery</p>
+        </div>
+    </div>
+
+    <!-- JavaScript script -->
+    <script src="./photo.js"></script>
+</body>
+
+</html>
