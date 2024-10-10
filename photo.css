@@ -19,12 +19,9 @@ img {
 }
 
 
-.noti i:hover,
-.chat i:hover,
-.ava i:hover,
-.more i:hover {
+.click:hover{
     cursor: pointer;
-    background-color: #ccc;
+    background-color: lightgrey;
 
 }
 
@@ -133,13 +130,15 @@ button{
 
 .dropdown {
     display: none;
-    background-color: #f1f1f1;
+    background-color: white;
     padding: 10px;
     position: absolute;
     top: 40px;
-    right: 0;
+    right: 0;   
     z-index: 1;
     border-top-left-radius: 30px;
+    border-bottom: 1px;
+    box-shadow: 0 2px 3px 0 #ccc;
 }
 
 .menu {
@@ -197,6 +196,116 @@ button{
     height: 100vh;
     width: 450px;
 }
+
+.chat_content{
+    display: flex;
+    flex-direction: column;
+}
+
+.text_chat{
+    justify-items: center;
+    padding: 15px;
+}
+
+.text_chat h3{
+    text-align: center;
+}
+
+.noti_chat{
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.list-item-text p {
+    color: black;
+}
+
+.list-item i {
+    background-color: lightgray;
+    border-radius: 50px;
+}
+
+.list-item-text {
+    flex-grow: 1;
+    margin: 0px 10px;
+}
+
+.list-item img {
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+}
+
+.list-item:hover{
+    cursor: pointer;
+    background-color: #ccc;
+}
+
+.inbox_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.message_section {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.message_section i{
+    background-color: red;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+}
+
+.message_section p{
+    margin: 0px 10px;
+}
+
+.message_section:hover{
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.friend_invite{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 20px;
+}
+.friend_invite i{
+    background-color: lightgray;
+    border-radius: 50px;
+    color: black;
+}
+
+.friend_invite p{
+    margin: 0px 10px;
+}
+
+.friend_invite:hover{
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+
+
+
+
+
 
 .more-content {
     margin-top: 35px;
