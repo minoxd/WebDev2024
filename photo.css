@@ -1,0 +1,494 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+div {
+    font-family: Helvetica;
+    font-size: 13px;
+}
+
+input {
+    font-family: Helvetica;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+
+.click:hover{
+    cursor: pointer;
+    background-color: lightgrey;
+
+}
+
+/* Header CSS */
+#icon {
+    width: 80px;
+    height: 40px;
+}
+
+#icon:hover {
+    cursor: pointer;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 8px 20px;
+    position: fixed;
+    z-index: 1;
+    border-bottom: 1px;
+    box-shadow: 0 2px 3px 0 #ccc;
+    background-color: white;
+}
+
+#home{
+    text-decoration: none;
+    color: white;
+}
+
+#create {
+    text-decoration: none;
+    color: black;
+}
+
+button{
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+.tag_header,
+.profile_header {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+}
+
+.Home,
+.Create {
+    padding: 0px 15px;
+    width: 100%;
+}
+
+.Home {
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    padding: 12px;
+    margin-left: 8px;
+}
+
+.Home:hover {
+    cursor: pointer;
+}
+
+.Create:hover {
+    cursor: pointer;
+}
+
+.search_header {
+    width: 80%;
+}
+
+#search {
+    width: 100%;
+    height: 60%;
+    padding: 15px;
+    border: none;
+    background-color: #e7e7e7;
+    margin-top: 12px;
+    border-radius: 30px;
+}
+
+/* Button in Header */
+.profile_header{
+    margin-left: 5px;
+}
+
+.noti,
+.ava,
+.chat,
+.more {
+    width: 100%;
+    margin: 0px 10px;
+}
+
+.noti i,
+.chat i,
+.ava i,
+.more i {
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.dropdown {
+    display: none;
+    background-color: white;
+    padding: 10px;
+    position: absolute;
+    top: 40px;
+    right: 0;   
+    z-index: 1;
+    border-top-left-radius: 30px;
+    border-bottom: 1px;
+    box-shadow: 0 2px 3px 0 #ccc;
+}
+
+.menu {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    border-radius: 50px ;
+}
+
+.menu ul{
+    position: absolute;
+    list-style: none;
+    background-color: white;
+    color: black;
+    left: 0;
+    top: 100%;
+    transform: translate(-65%, 0);
+    display: none;
+    box-shadow: 0 2px 3px 0 black;
+    margin: 18px;
+}
+
+.menu ul li {
+    padding: 12px;
+    width: 150px;
+    height: 40px;
+    cursor: pointer; 
+}
+
+.menu ul.show {
+    display: block;
+}
+
+.menu:hover{
+    cursor: pointer;
+    background-color: rgb(204, 204, 204);
+    color: black;
+}
+
+.menu ul li:hover{
+    background-color: #ccc;
+    color: black;
+}
+
+.menu:hover ul{
+    display: block;
+} 
+
+.noti-content,
+.chat-content {
+    margin-top: 35px;
+    height: 100vh;
+    width: 450px;
+}
+
+.chat_content{
+    display: flex;
+    flex-direction: column;
+}
+
+.text_chat{
+    justify-items: center;
+    padding: 15px;
+}
+
+.text_chat h3{
+    text-align: center;
+}
+
+.noti_chat{
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.list-item-text p {
+    color: black;
+}
+
+.list-item i {
+    background-color: lightgray;
+    border-radius: 50px;
+}
+
+.list-item-text {
+    flex-grow: 1;
+    margin: 0px 10px;
+}
+
+.list-item img {
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+}
+
+.list-item:hover{
+    cursor: pointer;
+    background-color: #ccc;
+}
+
+.inbox_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.message_section {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.message_section i{
+    background-color: red;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+}
+
+.message_section p{
+    margin: 0px 10px;
+}
+
+.message_section:hover{
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.friend_invite{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 20px;
+}
+.friend_invite i{
+    background-color: lightgray;
+    border-radius: 50px;
+    color: black;
+}
+
+.friend_invite p{
+    margin: 0px 10px;
+}
+
+.friend_invite:hover{
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+.more-content {
+    margin-top: 35px;
+    height: 60vh;
+    width: 400px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+/* Body */
+.body {
+    width: 100%;
+    padding-top: 100px;
+    margin: auto;
+}
+
+/* Filter CSS */
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px 10px;
+    padding: 0px 0px 10px 0px;
+    width: 100%;
+}
+
+.filter-buttons button {
+    color: white;
+    background: #2a3c95;
+    border-color: transparent;
+    padding: 8px 10px;
+    border-radius: 10px;
+    margin: 0px 3px 10px 0px;
+}
+
+.filter-buttons button:hover {
+    background: #ec2227;
+    color: white;
+    cursor: pointer;
+}
+
+.filter-buttons button.active {
+    color: white;
+    background: #ec2227;
+    cursor: pointer;
+}
+
+/* More button CSS */
+.hidden-buttons {
+    display: none;
+    flex-wrap: wrap;
+}
+
+#showMoreBtn {
+    color: white;
+    background: #2a3c95;
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+#showMoreBtn:hover {
+    color: white;
+    background: #ec2227;
+    cursor: pointer;
+}
+
+/* Image CSS */
+.filterable-cards {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.filterable-cards .card {
+    width: 250px;
+    height: fit-content;
+    margin: 8px 8px 10px 8px;
+}
+
+.filterable-cards .card:hover {
+    cursor: pointer;
+    transform: scale(1.05)
+}
+
+.filterable-cards .card img {
+    border-radius: 30px;
+    border-bottom: 1px;
+    box-shadow: 0 2px 3px 0 #343333;
+}
+
+.filterable-cards .card.hide {
+    display: none;
+}
+
+/* Row CSS */
+.column {
+    display: flex;
+    margin: 0px 5px;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+/* Footer */
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0px;
+    margin-top: 100px;
+}
+
+.f-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8px 0px;
+    font-size: 24px;
+}
+
+.f-item div {
+    padding: 0px 2px;
+}
+
+.f-text p {
+    margin: 5px 0px;
+}
+
+@media only screen and (max-width: 3100px) {
+    .body {
+        height: 2150px;
+    }
+}
+
+@media only screen and (max-width: 2100px) {
+    .body {
+        height: 2900px;
+    }
+}
+
+
+@media only screen and (max-width: 1600px) {
+    .body {
+        height: 4000px;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .body {
+        height: 5000px;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .body {
+        height: 6000px;
+    }
+
+    .noti,
+    .chat,
+    .ava,
+    .more {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .body {
+        height: 9500px;
+    }
+
+    .noti,
+    .chat,
+    .ava,
+    .more {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+}
