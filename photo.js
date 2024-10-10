@@ -111,7 +111,7 @@ document.getElementById('search').addEventListener('input', function () {
         const dataName = card.getAttribute('data-name').toLowerCase(); // Get data-name attribute of the card
 
         // Check if search value matches alt text or data-name
-        if (altText.includes(searchValue) || dataName.includes(searchValue)) {
+        if (altText.startsWith(searchValue) || dataName.startsWith(searchValue)) {
             card.style.display = ''; // Show the image card
             matchesFound = true; // A match is found
         } else {
