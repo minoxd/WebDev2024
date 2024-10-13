@@ -301,12 +301,6 @@ button{
     cursor: pointer;
 }
 
-
-
-
-
-
-
 .more-content {
     margin-top: 35px;
     height: 60vh;
@@ -411,27 +405,45 @@ button{
 
 /* Footer */
 .footer {
-    background-color: black;
+    background-color: #2a3c95;
     color: white;
+    padding: 20px 0;
     text-align: center;
-    padding: 20px 0px;
-    margin-top: 100px;
+    width: 100%;
+    margin-top: 50px;
 }
 
-.f-item {
+.footer-section {
+    flex: 1;
+    padding: 0 10px;
+    min-width: 200px; 
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+/* Social icons container */
+.footer-section .social-icons {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 8px 0px;
-    font-size: 24px;
+    justify-content: center; 
 }
 
-.f-item div {
-    padding: 0px 2px;
+.social-icon {
+    margin-right: 8px; 
+    color: white;
 }
 
-.f-text p {
-    margin: 5px 0px;
+.social-icon:hover {
+    color: #ec2227;
+}
+
+.social-icon:last-child {
+    margin-right: 0;
+}   
+
+.footer .f-text p{
+    margin: 10px 0px 0px 0px;
 }
 
 @media only screen and (max-width: 3100px) {
@@ -445,7 +457,6 @@ button{
         height: 2900px;
     }
 }
-
 
 @media only screen and (max-width: 1600px) {
     .body {
