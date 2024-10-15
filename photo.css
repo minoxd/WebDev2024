@@ -139,6 +139,7 @@ button{
     border-top-left-radius: 30px;
     border-bottom: 1px;
     box-shadow: 0 2px 3px 0 #ccc;
+    border: 3px solid black;
 }
 
 .menu {
@@ -346,27 +347,6 @@ button{
     cursor: pointer;
 }
 
-/* More button CSS */
-.hidden-buttons {
-    display: none;
-    flex-wrap: wrap;
-}
-
-#showMoreBtn {
-    color: white;
-    background: #2a3c95;
-    padding: 8px;
-    border-radius: 10px;
-    border: none;
-    margin-bottom: 10px;
-}
-
-#showMoreBtn:hover {
-    color: white;
-    background: #ec2227;
-    cursor: pointer;
-}
-
 /* Image CSS */
 .filterable-cards {
     display: flex;
@@ -377,7 +357,7 @@ button{
 .filterable-cards .card {
     width: 250px;
     height: fit-content;
-    margin: 8px 8px 10px 8px;
+    margin: 8px 8px 5px 8px;
 }
 
 .filterable-cards .card:hover {
@@ -386,7 +366,7 @@ button{
 }
 
 .filterable-cards .card img {
-    border-radius: 30px;
+    border-radius: 15px;
     border-bottom: 1px;
     box-shadow: 0 2px 3px 0 #343333;
 }
@@ -401,6 +381,20 @@ button{
     margin: 0px 5px;
     flex-wrap: wrap;
     flex-direction: column;
+}
+
+.card_text{
+    padding: 8px 6px 3px 3px;
+}
+
+.card_text p {
+    color: black;
+    margin-left: 8px;
+}
+
+.card_author{
+    display: flex;
+    margin: 2px 0px 0px 10px;
 }
 
 /* Footer */
