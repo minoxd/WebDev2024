@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photo Gallery</title>
+    <!-- Icon -->
+    <link rel="icon" type="image/x-icon" href="./icon.webp">
     <!-- CSS link -->
     <link rel="stylesheet" href="./photo.css">
     <!-- Font Awsome -->
@@ -19,16 +21,11 @@
     <div class="header">
         <div class="tag_header">
             <div class="icon">
-                <img id="icon"
-                    src="https://cdn.haitrieu.com/wp-content/uploads/2022/11/Logo-Truong-Dai-hoc-Khoa-hoc-va-Cong-nghe-Ha-Noi-VN-France-University.png"
-                    alt="">
+                <img id="icon" src="https://usth.edu.vn/wp-content/uploads/2021/11/logo.png" alt="icon">
             </div>
-            <div class="Home">Home</div>
-            <div class="Image">Image</div>
-            <div class="Tool">Tool</div>
-            <div class="Temp">Template</div>
-            <div class="PSD">PSD</div>
-            <div class="More">More</div>
+            <div class="Home"><button><a href="photo.html" id="home">Home</a></button></div>
+            <div class="Create"><button><a href="create.html" id="create">Create</a></button></div>
+
         </div>
 
         <div class="search_header">
@@ -37,210 +34,900 @@
 
         <div class="profile_header">
             <div class="noti">
-                <i class="fa-regular fa-bell"></i>
+                <i class="fa-regular fa-bell click"></i>
+                <div class="dropdown noti-content">
+                    <div class="text_chat">
+                        <h3>Update</h3>
+                    </div>
+
+                    <div class="noti_chat">
+                        <h3>Today</h3>
+                    </div>
+
+                    <div class="list-item">
+                        <img src="https://img.freepik.com/free-photo/androgynous-avatar-non-binary-queer-person_23-2151100270.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1728432000&semt=ais_hybrid"
+                            .jpeg alt="Profile">
+                        <div class="list-item-text">
+                            <p>Your home feed has new Pins</p>
+                        </div>
+                        <div class="list_noti_date">
+                            <p>2 days</p>
+                        </div>
+                    </div>
+
+                    <div class="list-item">
+                        <i class="fa-solid fa-plus"></i>
+                        <div class="list-item-text">
+                            <p>What's your style? Create your first Pin to share what inspires you. </p>
+                        </div>
+                        <div class="list_noti_date">
+                            <p>1 week</p>
+                        </div>
+                    </div>
+
+                    <div class="list-item">
+                        <img src="https://thumbs.dreamstime.com/b/chat-icon-isolated-white-background-79426494.jpg"
+                            .jpeg alt="Image">
+                        <div class="list-item-text">
+                            <p>Inspried by you</p>
+                        </div>
+                        <div class="list_noti_date">
+                            <p>2 weeks</p>
+                        </div>
+                    </div>
+
+                    <div class="list-item">
+                        <img src="https://cdn-icons-png.flaticon.com/512/5651/5651147.png" alt="Comic">
+                        <div class="list-item-text">
+                            <p><b>Nghệ thuật truyện tranh</b>for you</p>
+                        </div>
+                        <div class="list_noti_date">
+                            <p>2 weeks</p>
+                        </div>
+                    </div>
+
+                    <div class="list-item">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <div class="list-item-text">
+                            <p>Still looking? Explore ideas related to <b>Reel</b></p>
+                        </div>
+                        <div class="list_noti_date">
+                            <p>1 month</p>
+                        </div>
+                    </div>
+
+                    <div class="list-item">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <div class="list-item-text">
+                            <p>Still looking? Explore ideas related to <b>Flickr UI</b></p>
+                        </div>
+                        <div class="list_noti_date">
+                            <p>2 months</p>
+                        </div>
+                    </div>
+
+                    <div class="list-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzzGzgjBMmWYLJeZIke9xfXwGuRvRvrM0z9w&s"
+                            .jpeg alt="Dragon Ball">
+                        <div class="list-item-text">
+                            <p><b>One Piece</b> for you</p>
+                        </div>
+                        <div class="list_noti_date">
+                            <p>4 months</p>
+                        </div>
+                    </div>
+
+                    <div class="list-item">
+                        <img src="https://t4.ftcdn.net/jpg/02/32/88/17/360_F_232881761_fFzmhZfuQx6xnytVFlB1Bg3ApIjfoX9J.jpg"
+                            .jpeg alt="Flowers">
+                        <div class="list-item-text">
+                            <p>Inspired by you </p>
+                        </div>
+                        <div class="list_noti_date">
+                            <p>6 months</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat">
+                <i class="fa-solid fa-comment click"></i>
+                <div class="dropdown chat-content">
+                    <div class="chat_content">
+                        <div class="inbox_header">
+                            <i class="fa-solid fa-xmark click"></i>
+                            <h3>Inbox</h3>
+                            <i class="fa-solid fa-ellipsis click"></i>
+                        </div>
+
+                        <div class="message_section">
+                            <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
+                            <p>New messages</p>
+                        </div>
+
+                        <div class="friend_invite">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <p>Invite Friends</p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
             <div class="ava">
-                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-user click"></i>
+                <div class="dropdown user-content">User Content</div>
+            </div>
+
+            <div class="more">
+                <i class="fa-solid fa-angle-down click"></i>
+                <div class="dropdown more-content">Setting Content</div>
+            </div>
+
+            <div class="menu">
+                <i class="fa-solid fa-bars"></i>
+                <ul>
+                    <li>Notification</li>
+                    <li>Chats</li>
+                    <li>Users</li>
+                    <li>Setting</li>
+                </ul>
             </div>
         </div>
     </div>
-
 
     <!-- Body -->
     <div class="body">
 
         <!-- Filter-->
-        <!-- data-filter == data-name -->
         <div class="filter-buttons">
             <button class="active" data-filter="all">Show all</button>
-            <button data-filter="nature">1</button>
-            <button data-filter="car">2</button>
-            <button data-filter="people">3</button>
-            <button data-filter="house">4</button>
-            <button data-filter="dog">5</button>
-            <button data-filter="cat">6</button>
-            <button data-filter="nature">7</button>
-            <button data-filter="car">8</button>
-            <button data-filter="people">9</button>
-            <button data-filter="house">10</button>
-            <button data-filter="dog">11</button>
-            <button data-filter="cat">12</button>
-            <button data-filter="nature">13</button>
-            <button data-filter="car">14</button>
-            <button data-filter="people">15</button>
-            <button data-filter="house">16</button>
-            <button data-filter="dog">17</button>
-            <button data-filter="cat">18</button>
-            <button data-filter="nature">19</button>
-            <button data-filter="car">20</button>
-            <button data-filter="people">21</button>
-            <button data-filter="house">22</button>
-            <button data-filter="dog">23</button>
-            <button data-filter="cat">24</button>
-            <button data-filter="cat">25</button>
-            <button data-filter="nature">26</button>
-            <button data-filter="car">27</button>
-            <button data-filter="people">28</button>
-            <button data-filter="house">29</button>
-            <button data-filter="dog">30</button>
-            <button data-filter="cat">31</button>
-            <button data-filter="nature">32</button>
-            <button data-filter="car">33</button>
-            <button data-filter="people">34</button>
+            <button data-filter="nature">Nature</button>
+            <button data-filter="car">Cars</button>
+            <button data-filter="phone">Phone</button>
+            <button data-filter="shoe">Shoes</button>
+            <button data-filter="cloth">Clothes</button>
+            <button data-filter="movie">Movie</button>
+            <button data-filter="house">House</button>
+            <button data-filter="city">City</button>
+            <button data-filter="music">Music</button>
+            <button data-filter="laptop">Laptops</button>
+            <button data-filter="food">Food</button>
+            <button data-filter="book">Books</button>
+            <button data-filter="art">Art</button>
+            <button data-filter="game">Games</button>
+            <button data-filter="travel">Travel</button>
+            <button data-filter="animal">Animals</button>
+            <button data-filter="bike">Bikes</button>
+            <button data-filter="furniture">Furniture</button>
+            <button data-filter="toy">Toys</button>
+            <button data-filter="space">Space</button>
+            <button data-filter="plant">Plants</button>
+            <button data-filter="building">Buildings</button>
+            <button data-filter="watch">Watches</button>
+            <button data-filter="gadget">Gadgets</button>
+            <button data-filter="drink">Drinks</button>
+            <button data-filter="fashion">Fashion</button>
+            <button data-filter="sport">Sports</button>
+            <button data-filter="technology">Technology</button>
+            <button data-filter="fitness">Fitness</button>
+            <button data-filter="camera">Cameras</button>
+            <button data-filter="history">History</button>
+            <button data-filter="festival">Festivals</button>
+            <button data-filter="education">Education</button>
+            <button data-filter="music-instruments">Music Instruments</button>
+
         </div>
 
         <!-- Filterable Images / Cards Section -->
         <div class="filterable-cards">
-            <div class="row">
-                <div class="card" data-name="nature">
-                    <img src="cloth-1.jpg" alt="nature">
+
+            <div class="column">
+
+                <div class="card" data-name="animal">
+                    <img src="https://imgur.com/vPcF5hG.jpeg" alt="animal">
+                    <div class="card_text">
+                        <p>Animal</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="animal">
+                    <img src="https://imgur.com/xfEvtmE.jpeg" alt="animal">
+                    <div class="card_text">
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="animal">
+                    <img src="https://imgur.com/cxOES4z.jpeg" alt="animal">
+                </div>
+
+                <div class="card" data-name="car">
+                    <img src="https://imgur.com/MZ6bCx9.jpeg" alt="car">
+                    <div class="card_text">
+                        <p>Car</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="car">
+                    <img src="https://imgur.com/s8urdj0.jpeg" alt="car">
+                    <div class="card_text">
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="car">
+                    <img src="https://imgur.com/STHBQRZ.jpeg" alt="car">
+                    <div class="card_text">
+                        <p>Car</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="card" data-name="nature">
-                    <img src="cloth-2.jpg" alt="img">
+                    <img src="https://imgur.com/UlSpVWB.jpeg" alt="nature">
+                    <div class="card_text">
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="card" data-name="nature">
-                    <img src="cloth-3.jpg" alt="img">
-                </div>
-
-                <div class="card" data-name="cars">
-                    <img src="phone-1.jpg" alt="img">
-                </div>
-
-                <div class="card" data-name="cars">
-                    <img src="phone-2.jpg" alt="img">
-                </div>
-
-                <div class="card" data-name="cars">
-                    <img src="phone-1.jpg" alt="img">
-                </div>
-
-                <div class="card" data-name="people">
-                    <img src="shoe-1.jpg" alt="img">
-                </div>
-
-                <div class="card" data-name="people">
-                    <img src="shoe-2.jpg" alt="img">
-                </div>
-
-                <div class="card" data-name="people">
-                    <img src="shoe-2.jpg" alt="img">
-                </div>
-
-            </div>
-            <div class="row">
-                <div class="card" data-name="nature">
-                    <img src="cloth-1.jpg" alt="nature">
+                    <img src="https://imgur.com/bqLyNHs.jpeg" alt="nature">
+                    <div class="card_text">
+                        <p>Nature</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="card" data-name="nature">
-                    <img src="cloth-2.jpg" alt="img">
+                    <img src="https://imgur.com/L91DT7a.jpeg" alt="nature">
+                    <div class="card_text">
+                        <p>Nature</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="card" data-name="nature">
-                    <img src="cloth-3.jpg" alt="img">
+                <div class="card" data-name="technology">
+                    <img src="https://imgur.com/mu923p0.jpeg" alt="technology">
+                    <div class="card_text">
+                        <p>Technology</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="card" data-name="cars">
-                    <img src="phone-1.jpg" alt="img">
+                <div class="card" data-name="technology">
+                    <img src="https://imgur.com/AvuZ2uy.jpeg" alt="technology">
+                    <div class="card_text">
+                        <p>Technology</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="card" data-name="cars">
-                    <img src="phone-2.jpg" alt="img">
+                <div class="card" data-name="technology">
+                    <img src="https://imgur.com/uxE21Fj.jpeg" alt="technology">
+                    <div class="card_text">
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="card" data-name="cars">
-                    <img src="phone-1.jpg" alt="img">
+                <div class="card" data-name="phone">
+                    <img src="https://imgur.com/PzKTp2d.jpeg" alt="phone">
+                    <div class="card_text">
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="card" data-name="people">
-                    <img src="shoe-1.jpg" alt="img">
+                <div class="card" data-name="phone">
+                    <img src="https://imgur.com/Eg1ZDc1.jpeg" alt="phone">
+                    <div class="card_text">
+                        <p>Phone</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="card" data-name="people">
-                    <img src="shoe-2.jpg" alt="img">
+                <div class="card" data-name="shoe">
+                    <img src="https://imgur.com/DAGu3H8.jpeg" alt="shoe">
                 </div>
 
-                <div class="card" data-name="people">
-                    <img src="shoe-2.jpg" alt="img">
+                <div class="card" data-name="shoe">
+                    <img src="https://imgur.com/NOQTN2r.jpeg" alt="shoe">
+                    <div class="card_text">
+                        <p>Abibas</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
                 </div>
 
-            </div>
-            <div class="row">
-                <div class="card" data-name="nature">
-                    <img src="cloth-1.jpg" alt="nature">
+                <div class="card" data-name="cloth">
+                    <img src="https://imgur.com/nkJkNhc.jpeg" alt="cloth">
+                    <div class="card_text">
+                        <p>Cloth</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="card" data-name="nature">
-                    <img src="cloth-2.jpg" alt="img">
+                <div class="card" data-name="cloth">
+                    <img src="https://imgur.com/Vru2kEL.jpeg" alt="cloth">
+                    <div class="card_text">
+                        <p>Cloth</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="card" data-name="nature">
-                    <img src="cloth-3.jpg" alt="img">
+                <div class="card" data-name="cloth">
+                    <img src="https://imgur.com/BLD5LXH.jpeg" alt="cloth">
+                    <div class="card_text">
+                        <p>Cloth</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="card" data-name="cars">
-                    <img src="phone-1.jpg" alt="img">
+                <div class="card" data-name="movie">
+                    <img src="https://imgur.com/gUjvl5D.jpeg" alt="movie">
+                    <div class="card_text">
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="card" data-name="cars">
-                    <img src="phone-2.jpg" alt="img">
+                <div class="card" data-name="movie">
+                    <img src="https://imgur.com/F2fvkYW.jpeg" alt="movie">
+                    <div class="card_text">
+                        <p>Movie</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="card" data-name="cars">
-                    <img src="phone-1.jpg" alt="img">
+                <div class="card" data-name="house">
+                    <img src="https://imgur.com/IZk8RaO.jpeg" alt="house">
+                    <div class="card_text">
+                        <p>House</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="card" data-name="people">
-                    <img src="shoe-1.jpg" alt="img">
+                <div class="card" data-name="house">
+                    <img src="https://imgur.com/3siLU43.jpeg" alt="house">
+                    <div class="card_text">
+                        <p>House</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="card" data-name="people">
-                    <img src="shoe-2.jpg" alt="img">
+                <div class="card" data-name="city">
+                    <img src="https://imgur.com/XzMJq0c.jpeg" alt="city">
+                    <div class="card_text">
+                        <p>Ville</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="card" data-name="people">
-                    <img src="shoe-2.jpg" alt="img">
+                <div class="card" data-name="city">
+                    <img src="https://imgur.com/7Mxb08e.jpeg" alt="city">
+                    <div class="card_text">
+                        <p>City</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
                 </div>
 
-            </div>
-            <div class="row">
-                <div class="card" data-name="nature">
-                    <img src="cloth-1.jpg" alt="nature">
+                <div class="card" data-name="music">
+                    <img src="https://imgur.com/GyUdpey.jpeg" alt="music">
                 </div>
 
-                <div class="card" data-name="nature">
-                    <img src="cloth-2.jpg" alt="img">
+                <div class="card" data-name="music">
+                    <img src="https://imgur.com/YY2C0Vw.jpeg" alt="music">
+                    <div class="card_text">
+                        <p>Music</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="card" data-name="nature">
-                    <img src="cloth-3.jpg" alt="img">
+                <div class="card" data-name="laptop">
+                    <img src="https://imgur.com/aPYD651.jpeg" alt="laptop">
+                    <div class="card_text">
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="card" data-name="cars">
-                    <img src="phone-1.jpg" alt="img">
+                <div class="card" data-name="laptop">
+                    <img src="https://imgur.com/F4ECA4d.jpeg" alt="laptop">
+                    <div class="card_text">
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="card" data-name="cars">
-                    <img src="phone-2.jpg" alt="img">
+                <div class="card" data-name="food">
+                    <img src="https://imgur.com/xfWEHMJ.jpeg" alt="food">
+                    <div class="card_text">
+                        <p>Food</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="card" data-name="cars">
-                    <img src="phone-1.jpg" alt="img">
+                <div class="card" data-name="food">
+                    <img src="https://imgur.com/DD5K5gG.jpeg" alt="food">
+                    <div class="card_text">
+                        <p>Food</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="card" data-name="people">
-                    <img src="shoe-1.jpg" alt="img">
+                <div class="card" data-name="book">
+                    <img src="https://imgur.com/5t8xPqh.jpeg" alt="book">
+                    <div class="card_text">
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="card" data-name="people">
-                    <img src="shoe-2.jpg" alt="img">
+                <div class="card" data-name="book">
+                    <img src="https://imgur.com/coL6dr3.jpeg" alt="book">
+                    <div class="card_text">
+                        <p>Book</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="card" data-name="people">
-                    <img src="shoe-2.jpg" alt="img">
+                <div class="card" data-name="art">
+                    <img src="https://imgur.com/JYQ2zNn.jpeg" alt="art">
+                    <div class="card_text">
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="art">
+                    <img src="https://imgur.com/BA8dRN8.jpeg" alt="art">
+                    <div class="card_text">
+                        <p>Art</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="game">
+                    <img src="https://imgur.com/bkLGeZq.jpeg" alt="game">
+                    <div class="card_text">
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="game">
+                    <img src="https://imgur.com/sFPtl0X.jpeg" alt="game">
+                    <div class="card_text">
+                        <p>Game</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="travel">
+                    <img src="https://imgur.com/NyHb4aO.jpeg" alt="travel">
+                </div>
+
+                <div class="card" data-name="travel">
+                    <img src="https://imgur.com/TcnKtdU.jpeg" alt="travel">
+                    <div class="card_text">
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="bike">
+                    <img src="https://imgur.com/TWQ8Dw4.jpeg" alt="bike">
+                    <div class="card_text">
+                        <p>Bike</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="bike">
+                    <img src="https://imgur.com/Jyfx11f.jpeg" alt="bike">
+                    <div class="card_text">
+                        <p>Bike</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="furniture">
+                    <img src="https://imgur.com/11U0sIe.jpeg" alt="furniture">
+                    <div class="card_text">
+                        <p>Furniture</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="furniture">
+                    <img src="https://imgur.com/UNPVpgJ.jpeg" alt="furniture">
+                </div>
+
+                <div class="card" data-name="toy">
+                    <img src="https://imgur.com/EPbKDt7.jpeg" alt="toy">
+                    <div class="card_text">
+                        <p>Toy</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="toy">
+                    <img src="https://imgur.com/kOTM9Xo.jpeg" alt="toy">
+                    <div class="card_text">
+                        <p>Toy</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="space">
+                    <img src="https://imgur.com/x6hHvJC.jpeg" alt="space">
+                    <div class="card_text">
+                        <p>Space</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="space">
+                    <img src="https://imgur.com/XmIyw3W.jpeg" alt="space">
+                    <div class="card_text">
+                        <p>Space</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="plant">
+                    <img src="https://imgur.com/xpQRqsG.jpeg" alt="plant">
+                    <div class="card_text">
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="plant">
+                    <img src="https://imgur.com/mJ2NPPj.jpeg" alt="plant">
+                    <div class="card_text">
+                        <p>Plant</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="building">
+                    <img src="https://imgur.com/OIk9CCM.jpeg" alt="building">
+                </div>
+
+                <div class="card" data-name="building">
+                    <img src="https://imgur.com/OpLK0XJ.jpeg" alt="building">
+                    <div class="card_text">
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="watch">
+                    <img src="https://imgur.com/mwCU3Oo.jpeg" alt="watch">
+                    <div class="card_text">
+                        <p>Watch</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="watch">
+                    <img src="https://imgur.com/w77IUIx.jpeg" alt="watch">
+                    <div class="card_text">
+                        <p>Watch</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="gadget">
+                    <img src="https://imgur.com/2tZ295M.jpeg" alt="gadget">
+                    <div class="card_text">
+                        <p>Gadget</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="gadget">
+                    <img src="https://imgur.com/8dj2ixk.jpeg" alt="gadget">
+                </div>
+
+                <div class="card" data-name="drink">
+                    <img src="https://imgur.com/Q9cexug.jpeg" alt="drink">
+                    <div class="card_text">
+                        <p>Drink</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="drink">
+                    <img src="https://imgur.com/wWKGkkx.jpeg" alt="drink">
+                    <div class="card_text">
+                        <p>Drink</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="fashion">
+                    <img src="https://imgur.com/Hrptib5.jpeg" alt="fashion">
+                    <div class="card_text">
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="fashion">
+                    <img src="https://imgur.com/1Yf4QvP.jpeg" alt="fashion">
+                </div>
+
+                <div class="card" data-name="sport">
+                    <img src="https://imgur.com/cObeRGu.jpeg" alt="sport">
+                    <div class="card_text">
+                        <p>Sport</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="sport">
+                    <img src="https://imgur.com/usV58lG.jpeg" alt="sport">
+                    <div class="card_text">
+                        <p>Sport</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="fitness">
+                    <img src="https://imgur.com/SJjfadJ.jpeg" alt="fitness">
+                    <div class="card_text">
+                        <p>Gym</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="fitness">
+                    <img src="https://imgur.com/HwmpkLg.jpeg" alt="fitness">
+                    <div class="card_text">
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="camera">
+                    <img src="https://imgur.com/sRXosMI.jpeg" alt="camera">
+                </div>
+
+                <div class="card" data-name="camera">
+                    <img src="https://imgur.com/5kQBLQh.jpeg" alt="camera">
+                    <div class="card_text">
+                        <p>Camera</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="history">
+                    <img src="https://imgur.com/Oz5NGCb.jpeg" alt="history">
+                    <div class="card_text">
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="history">
+                    <img src="https://imgur.com/GihmBi0.jpeg" alt="history">
+                    <div class="card_text">
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="festival">
+                    <img src="https://imgur.com/jssDfAQ.jpeg" alt="festival">
+                    <div class="card_text">
+                        <p>Festical</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="festival">
+                    <img src="https://imgur.com/LmhasN9.jpeg" alt="festival">
+                    <div class="card_text">
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="education">
+                    <img src="https://imgur.com/jzyD7J4.jpeg" alt="education">
+                    <div class="card_text">
+                        <p>Education</p>
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="education">
+                    <img src="https://imgur.com/Rm5pCgD.jpeg" alt="education">
+                </div>
+
+                <div class="card" data-name="music-instruments">
+                    <img src="https://imgur.com/FqdyoSN.jpeg" alt="music-instruments">
+                    <div class="card_text">
+                        <div class="card_author">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p>Name</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-name="music-instruments">
+                    <img src="https://imgur.com/3InFJgj.jpeg" alt="music-instruments">
                 </div>
 
             </div>
@@ -249,23 +936,32 @@
 
     </div>
 
+    <!-- Footer -->
+    <div class="footer" style="margin-top: 90px;">
 
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://x.com/" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.snapchat.com/" class="social-icon"><i class="fab fa-snapchat"></i></a>
+                <a href="https://www.youtube.com/" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
 
+        <div class="f-text">
+            <p>© 2024 Photo Gallery</p>
+        </div>
+    </div>
 
-
-
-
-
-
-
-
-
-
-
-
+    <!-- Go to top button -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
 
     <!-- JavaScript script -->
     <script src="./photo.js"></script>
+
 </body>
 
 </html>

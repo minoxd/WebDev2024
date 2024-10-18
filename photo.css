@@ -1,22 +1,45 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
 }
 
-img{
-    width: 100%;
-    height: 100%;
-    margin: 8px;
+div {
+    font-family: Helvetica;
+    font-size: 13px;
 }
+
+input {
+    font-family: Helvetica;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.click:hover {
+    cursor: pointer;
+    background-color: lightgrey;
+
+}
+
+body {
+    overflow-x: hidden;
+}
+
 
 /* Header CSS */
-#icon{
-    width: 100px;
-    height: 50px;
+#icon {
+    width: 80px;
+    height: 40px;
 }
 
-.header{
+#icon:hover {
+    cursor: pointer;
+}
+
+.header {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -28,118 +51,458 @@ img{
     background-color: white;
 }
 
-.tag_header{
+#home {
+    text-decoration: none;
+    color: white;
+}
+
+#create {
+    text-decoration: none;
+    color: black;
+}
+
+button {
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+.tag_header,
+.profile_header {
     display: flex;
     width: fit-content;
     align-items: center;
     justify-content: center;
 }
 
-.Home, .Image, .Tool, .Temp, .PSD, .More {
+.Home,
+.Create {
     padding: 0px 15px;
     width: 100%;
 }
 
-.search_header{
-    width: 100%;
+.Home {
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    padding: 12px;
+    margin-left: 8px;
 }
 
-#search{
-    width: 95%;
+.Home:hover {
+    cursor: pointer;
+}
+
+.Create:hover {
+    cursor: pointer;
+}
+
+.search_header {
+    width: 80%;
+}
+
+#search {
+    width: 100%;
     height: 60%;
-    padding: 10px;
+    padding: 15px;
     border: none;
     background-color: #e7e7e7;
-    margin-top: 15px;
+    margin-top: 12px;
+    border-radius: 30px;
 }
 
-.profile_header{
+/* Button in Header */
+.profile_header {
+    margin-left: 5px;
+}
+
+.noti,
+.ava,
+.chat,
+.more {
+    width: 100%;
+    margin: 0px 10px;
+}
+
+.noti i,
+.chat i,
+.ava i,
+.more i {
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.dropdown {
+    display: none;
+    background-color: white;
+    padding: 10px;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    z-index: 1;
+    border-top-left-radius: 30px;
+    border-bottom: 1px;
+    box-shadow: 0 2px 3px 0 #ccc;
+    border: 1px solid lightgrey;
+}
+
+.menu {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    border-radius: 50px;
+}
+
+.menu ul {
+    position: absolute;
+    list-style: none;
+    background-color: white;
+    color: black;
+    left: 0;
+    top: 100%;
+    transform: translate(-65%, 0);
+    display: none;
+    box-shadow: 0 2px 3px 0 black;
+    margin: 18px;
+}
+
+.menu ul li {
+    padding: 12px;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.menu ul.show {
+    display: block;
+}
+
+.menu:hover {
+    cursor: pointer;
+    background-color: rgb(204, 204, 204);
+    color: black;
+}
+
+.menu ul li:hover {
+    background-color: #ccc;
+    color: black;
+}
+
+.menu:hover ul {
+    display: block;
+}
+
+.noti-content,
+.chat-content {
+    margin-top: 35px;
+    height: 100vh;
+    width: 450px;
+}
+
+.chat_content {
     display: flex;
-    width: 10%;
+    flex-direction: column;
+}
+
+.text_chat {
+    justify-items: center;
+    padding: 15px;
+}
+
+.text_chat h3 {
+    text-align: center;
+}
+
+.noti_chat {
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.list-item-text p {
+    color: black;
+}
+
+.list-item i {
+    background-color: lightgray;
+    border-radius: 50px;
+}
+
+.list-item-text {
+    flex-grow: 1;
+    margin: 0px 10px;
+}
+
+.list-item img {
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+}
+
+.list-item:hover {
+    cursor: pointer;
+    background-color: #ccc;
+}
+
+.inbox_header {
+    display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 10px;
 }
 
-.profile_header .noti, .ava{
-    padding: 0px, 5px;
+.message_section {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.message_section i {
+    background-color: red;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+}
+
+.message_section p {
+    margin: 0px 10px;
+}
+
+.message_section:hover {
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+.friend_invite {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.friend_invite i {
+    background-color: lightgray;
+    border-radius: 50px;
+    color: black;
+}
+
+.friend_invite p {
+    margin: 0px 10px;
+}
+
+.friend_invite:hover {
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+.more-content {
+    margin-top: 35px;
+    height: 60vh;
+    width: 400px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
 }
 
 /* Body */
-.body{
-    height: 2000px; 
+.body {
     width: 100%;
-    padding-top: 100px;  
+    padding-top: 100px;
     margin: auto;
 }
+
 /* Filter CSS */
-.filter-buttons{
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
     margin: 0px 10px;
-    height: fit-content;
-    padding: 0px 0px 10px 0px ;
+    padding: 0px 0px 10px 0px;
+    width: 100%;
 }
 
 .filter-buttons button {
+    color: white;
     background: #2a3c95;
     border-color: transparent;
-    padding: 8px;
+    padding: 8px 10px;
     border-radius: 10px;
-    color: white;
-    margin-bottom: 3px;
+    margin: 0px 3px 10px 0px;
 }
-  
+
 .filter-buttons button:hover {
     background: #ec2227;
     color: white;
+    cursor: pointer;
 }
-  
+
 .filter-buttons button.active {
     color: white;
     background: #ec2227;
+    cursor: pointer;
 }
 
 /* Image CSS */
-.filterable-cards{
+.filterable-cards {
     display: flex;
-    margin: 0px 10px;
-    width: 100%;;
+    width: 100%;
+    height: 100%;
 }
+
 .filterable-cards .card {
     width: 250px;
     height: fit-content;
-    border: 2px solid transparent;
-    margin: 5px 10px 5px 0px;
+    margin: 8px 8px 5px 8px;
 }
-  
+
+.filterable-cards .card:hover {
+    cursor: pointer;
+    transform: scale(1.03)
+}
+
+.filterable-cards .card img {
+    border-radius: 15px;
+    border-bottom: 1px;
+    box-shadow: 0 2px 3px 0 #343333;
+}
+
 .filterable-cards .card.hide {
     display: none;
 }
-  
+
 /* Row CSS */
-.row{
+.column {
     display: flex;
+    margin: 0px 5px;
+    flex-wrap: wrap;
     flex-direction: column;
-    margin: 0px 10px;
+}
+
+.card_text {
+    padding: 8px 6px 3px 3px;
+}
+
+.card_text p {
+    color: black;
+    margin-left: 8px;
+}
+
+.card_author {
+    display: flex;
+    margin: 5px 0px 0px 10px;
+}
+
+/* Back to home button */
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #2a3c95;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    border-radius: 50%;
+}
+
+#myBtn:hover {
+    background-color: red;
 }
 
 /* Footer */
-/* .footer{
+.footer {
+    background-color: #2a3c95;
+    color: white;
+    padding: 20px 0;
     text-align: center;
-    padding: 12px ;
-    background-color: white;
+    width: 100%;
 }
-.foot-item{
-    display: flex;    
+
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+.footer-section .social-icons {
+    display: flex;
     justify-content: center;
 }
-.foot-text p{
-    display: block;
-    padding: 10px 0px;
-    color: #bcbcbc;
-    font-family:"Lato", sans-serif ;
+
+.social-icon {
+    margin-right: 8px;
+    color: white;
 }
-.foot-item i{
-    color: #bcbcbc;
-    font-size: 24px;
-    width: 24px;
-    margin: 0px 3px;
-} */
+
+.social-icon:hover {
+    color: #ec2227;
+}
+
+.footer .f-text p {
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 3100px) {
+    .body {
+        height: 2150px;
+    }
+}
+
+@media only screen and (max-width: 2100px) {
+    .body {
+        height: 2900px;
+    }
+}
+
+@media only screen and (max-width: 1610px) {
+    .body {
+        height: 4000px;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .body {
+        height: 5000px;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+
+    .noti,
+    .chat,
+    .ava,
+    .more {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+
+    .noti,
+    .chat,
+    .ava,
+    .more {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+}
