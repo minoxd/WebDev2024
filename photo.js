@@ -9,32 +9,28 @@ const filterCards = (e) => {
     e.target.classList.add("active");
 
     filterableCards.forEach(card => {
-        // show the card if it matches the clicked filter or show all cards if "all" filter is clicked
         if (card.dataset.name === e.target.dataset.filter || e.target.dataset.filter === "all") {
             if (e.target.dataset.filter === "all") {
-                cardColumn.style.flexDirection = "column"; // Change back to column for "all"
+                cardColumn.style.flexDirection = "column";
             } else {
-                cardColumn.style.flexDirection = "row"; // Change to row for other filters
+                cardColumn.style.flexDirection = "row";
             }
             return card.classList.replace("hide", "show");
-
         }
         card.classList.add("hide");
     });
-
 }
 
 filterButtons.forEach(button => button.addEventListener("click", filterCards));
 
-// Refresh of page's logo
+// Refresh Page 
 const logo = document.getElementById('icon');
 
 logo.addEventListener('click', () => {
     window.location.reload();
 });
 
-
-// Display when click
+// Display dropdown when click
 const notiIcon = document.querySelector('.noti i');
 const chatIcon = document.querySelector('.chat i');
 const moreIcon = document.querySelector('.more i');
@@ -47,7 +43,6 @@ const menuContent = document.querySelector('.menu ul');
 
 // Function to toggle dropdown visibility
 function toggleDropdown(content) {
-    // Hide all dropdowns first
     notiContent.style.display = 'none';
     chatContent.style.display = 'none';
     moreContent.style.display = 'none';
@@ -60,17 +55,14 @@ function toggleDropdown(content) {
     }
 }
 
-// Event listeners for click
 notiIcon.addEventListener('click', () => toggleDropdown(notiContent));
 chatIcon.addEventListener('click', () => toggleDropdown(chatContent));
 moreIcon.addEventListener('click', () => toggleDropdown(moreContent));
 moreIcon.addEventListener('click', () => toggleDropdown(menuContent));
 
-menuButton.addEventListener('click', function() {
-   
+menuButton.addEventListener('click', function () {
     menuContent.classList.toggle('show');
 });
-
 
 document.addEventListener('click', (event) => {
     if (!event.target.closest('.noti') && !event.target.closest('.chat') && !event.target.closest('.more')) {
@@ -83,29 +75,46 @@ document.addEventListener('click', (event) => {
     }
 });
 
-// Search Functionality
+// Search Function
 document.getElementById('search').addEventListener('input', function () {
     const searchValue = this.value.toLowerCase();
-    const cards = document.querySelectorAll('.card'); // Get all image cards
-    let matchesFound = false; // To check if there's any match
+    const cards = document.querySelectorAll('.card');
+    let matchesFound = false;
 
     cards.forEach(card => {
-        const altText = card.querySelector('img').getAttribute('alt').toLowerCase(); // Get alt text of the image
-        const dataName = card.getAttribute('data-name').toLowerCase(); // Get data-name attribute of the card
+        const altText = card.querySelector('img').getAttribute('alt').toLowerCase();
+        const dataName = card.getAttribute('data-name').toLowerCase();
 
-        // Check if search value matches alt text or data-name
+        // Check search value match text 
         if (altText.startsWith(searchValue) || dataName.startsWith(searchValue)) {
-            card.style.display = ''; // Show the image card
-            matchesFound = true; // A match is found
+            card.style.display = '';
+            matchesFound = true;
         } else {
-            card.style.display = 'none'; // Hide the image card
+            card.style.display = 'none';
         }
     });
 
-    // Change layout to row if search has matches, otherwise revert to column
     if (matchesFound && searchValue !== '') {
         cardColumn.style.flexDirection = 'row';
     } else {
         cardColumn.style.flexDirection = 'column';
     }
 });
+
+// Go to top button
+let mybutton = document.getElementById("myBtn");
+
+window.onscroll = function () { scrollFunction() };
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
