@@ -29,8 +29,9 @@ button{
     padding: 12px;
 
 }
-
-
+.search_header{
+    margin-left: 5px;
+}
 
 /* Wrapper for the upload area and image info */
 .upload-wrapper {
