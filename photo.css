@@ -18,12 +18,16 @@ img {
     height: auto;
 }
 
-
-.click:hover{
+.click:hover {
     cursor: pointer;
     background-color: lightgrey;
 
 }
+
+body {
+    overflow-x: hidden;
+}
+
 
 /* Header CSS */
 #icon {
@@ -47,7 +51,7 @@ img {
     background-color: white;
 }
 
-#home{
+#home {
     text-decoration: none;
     color: white;
 }
@@ -57,7 +61,7 @@ img {
     color: black;
 }
 
-button{
+button {
     padding: 0;
     border: none;
     background: none;
@@ -108,7 +112,7 @@ button{
 }
 
 /* Button in Header */
-.profile_header{
+.profile_header {
     margin-left: 5px;
 }
 
@@ -134,12 +138,12 @@ button{
     padding: 10px;
     position: absolute;
     top: 40px;
-    right: 0;   
+    right: 0;
     z-index: 1;
     border-top-left-radius: 30px;
     border-bottom: 1px;
     box-shadow: 0 2px 3px 0 #ccc;
-    border: 3px solid black;
+    border: 1px solid lightgrey;
 }
 
 .menu {
@@ -149,10 +153,10 @@ button{
     width: 100%;
     padding: 10px;
     position: relative;
-    border-radius: 50px ;
+    border-radius: 50px;
 }
 
-.menu ul{
+.menu ul {
     position: absolute;
     list-style: none;
     background-color: white;
@@ -169,27 +173,27 @@ button{
     padding: 12px;
     width: 150px;
     height: 40px;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
 .menu ul.show {
     display: block;
 }
 
-.menu:hover{
+.menu:hover {
     cursor: pointer;
     background-color: rgb(204, 204, 204);
     color: black;
 }
 
-.menu ul li:hover{
+.menu ul li:hover {
     background-color: #ccc;
     color: black;
 }
 
-.menu:hover ul{
+.menu:hover ul {
     display: block;
-} 
+}
 
 .noti-content,
 .chat-content {
@@ -198,21 +202,21 @@ button{
     width: 450px;
 }
 
-.chat_content{
+.chat_content {
     display: flex;
     flex-direction: column;
 }
 
-.text_chat{
+.text_chat {
     justify-items: center;
     padding: 15px;
 }
 
-.text_chat h3{
+.text_chat h3 {
     text-align: center;
 }
 
-.noti_chat{
+.noti_chat {
     padding: 5px;
     margin-bottom: 10px;
 }
@@ -246,7 +250,7 @@ button{
     border-radius: 10px;
 }
 
-.list-item:hover{
+.list-item:hover {
     cursor: pointer;
     background-color: #ccc;
 }
@@ -265,40 +269,41 @@ button{
     border-radius: 20px;
 }
 
-.message_section i{
+.message_section i {
     background-color: red;
     border-radius: 50%;
     text-align: center;
     color: white;
 }
 
-.message_section p{
+.message_section p {
     margin: 0px 10px;
 }
 
-.message_section:hover{
-    background-color: #ccc;
+.message_section:hover {
+    background-color: #ddd;
     cursor: pointer;
 }
 
-.friend_invite{
+.friend_invite {
     display: flex;
     align-items: center;
     padding: 15px;
     border-radius: 20px;
 }
-.friend_invite i{
+
+.friend_invite i {
     background-color: lightgray;
     border-radius: 50px;
     color: black;
 }
 
-.friend_invite p{
+.friend_invite p {
     margin: 0px 10px;
 }
 
-.friend_invite:hover{
-    background-color: #ccc;
+.friend_invite:hover {
+    background-color: #ddd;
     cursor: pointer;
 }
 
@@ -362,7 +367,7 @@ button{
 
 .filterable-cards .card:hover {
     cursor: pointer;
-    transform: scale(1.05)
+    transform: scale(1.03)
 }
 
 .filterable-cards .card img {
@@ -383,7 +388,7 @@ button{
     flex-direction: column;
 }
 
-.card_text{
+.card_text {
     padding: 8px 6px 3px 3px;
 }
 
@@ -392,9 +397,31 @@ button{
     margin-left: 8px;
 }
 
-.card_author{
+.card_author {
     display: flex;
-    margin: 2px 0px 0px 10px;
+    margin: 5px 0px 0px 10px;
+}
+
+/* Back to home button */
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #2a3c95;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    border-radius: 50%;
+}
+
+#myBtn:hover {
+    background-color: red;
 }
 
 /* Footer */
@@ -404,27 +431,19 @@ button{
     padding: 20px 0;
     text-align: center;
     width: 100%;
-    margin-top: 50px;
-}
-
-.footer-section {
-    flex: 1;
-    padding: 0 10px;
-    min-width: 200px; 
 }
 
 .footer-section h4 {
     margin-bottom: 10px;
 }
 
-/* Social icons container */
 .footer-section .social-icons {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
 }
 
 .social-icon {
-    margin-right: 8px; 
+    margin-right: 8px;
     color: white;
 }
 
@@ -432,12 +451,8 @@ button{
     color: #ec2227;
 }
 
-.social-icon:last-child {
-    margin-right: 0;
-}   
-
-.footer .f-text p{
-    margin: 10px 0px 0px 0px;
+.footer .f-text p {
+    margin-top: 10px;
 }
 
 @media only screen and (max-width: 3100px) {
@@ -452,7 +467,7 @@ button{
     }
 }
 
-@media only screen and (max-width: 1600px) {
+@media only screen and (max-width: 1610px) {
     .body {
         height: 4000px;
     }
@@ -465,9 +480,6 @@ button{
 }
 
 @media only screen and (max-width: 1150px) {
-    .body {
-        height: 6000px;
-    }
 
     .noti,
     .chat,
@@ -482,9 +494,6 @@ button{
 }
 
 @media only screen and (max-width: 760px) {
-    .body {
-        height: 9500px;
-    }
 
     .noti,
     .chat,
